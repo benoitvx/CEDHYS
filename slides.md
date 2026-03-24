@@ -50,12 +50,6 @@ Un département de la DINUM **entièrement consacré à l'IA** depuis 2025.
 
 # Rendre les données publiques AI-ready
 
-## Rendre les données publiques AI-ready
-
-:::callout[Context engineering]
-La performance de l'IA dépend de la qualité du contexte. Notre mission : préparer et exposer la donnée publique dans **tous les formats** que l'IA consomme.
-:::
-
 ## La conviction de départ
 
 La performance d'un système d'IA dépend directement de la **qualité du contexte** qu'on lui fournit.
@@ -209,29 +203,15 @@ Aujourd'hui, on traite de la **donnée ouverte** : textes juridiques, open data,
 
 ## Convictions terrain
 
-:::callout[1. La préparation des données est le vrai bloqueur]
-Pas l'accès. Les données existent, mais ne sont pas dans un format exploitable par l'IA.
-:::
+1. **La préparation des données est le vrai bloqueur** — pas l'accès. Les données existent, mais ne sont pas dans un format exploitable par l'IA.
 
-:::callout[2. Il faut multiplier les formats d'exposition]
-Parquet, RAG, MCP, Skills, CLI… Chaque usage a son format optimal.
-:::
+2. **Il faut multiplier les formats d'exposition** — Parquet, RAG, MCP, Skills, CLI… Chaque usage a son format optimal.
 
-:::callout[3. La verticalisation par domaine fait sens]
-Juridique, éducation, santé, économie… Chaque domaine a ses spécificités.
-:::
+3. **La verticalisation par domaine fait sens** — juridique, éducation, santé, économie… Chaque domaine a ses spécificités.
 
-:::callout[4. Le RAG mutualisé a ses limites]
-Chaque cas d'usage est spécifique. La vraie valeur est dans les données pré-préparées, pas dans l'infra RAG elle-même.
-:::
+4. **Le RAG mutualisé a ses limites** — chaque cas d'usage est spécifique. La vraie valeur est dans les données pré-préparées, pas dans l'infra RAG elle-même.
 
 # Vibe coding dans l'État
-
-## Vibe coding dans l'État
-
-:::callout[Le vibe coding]
-Des non-développeurs qui créent des applications grâce à l'IA. Le rapport au code change fondamentalement.
-:::
 
 ## Le constat — shadow IT massif
 
@@ -283,12 +263,6 @@ Concept en cours d'exploration — pas encore sorti ni validé. On en est au sta
 :::
 
 # Enseignements
-
-## Enseignements
-
-:::callout[Retours d'expérience]
-Ce qu'on a appris en construisant le socle IA de l'État — et les parallèles avec le monde de la santé.
-:::
 
 ## Ce qui marche
 
