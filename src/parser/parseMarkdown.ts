@@ -123,7 +123,8 @@ function processDirectives(content: string): string {
     /:::callout(?:\[([^\]]*)\])?\s*([\s\S]*?):::/g,
     (_match, title: string | undefined, body: string) => {
       const titleHtml = title ? `<p class="fr-callout__title">${title}</p>` : ''
-      return `<div class="fr-callout">${titleHtml}<p class="fr-callout__text">${body.trim()}</p></div>`
+      const processedBody = body.trim().replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/\*(.+?)\*/g, '<em>$1</em>')
+      return `<div class="fr-callout">${titleHtml}<p class="fr-callout__text">${processedBody}</p></div>`
     }
   )
 

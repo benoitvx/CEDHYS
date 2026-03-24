@@ -4,7 +4,7 @@ subtitle: "Rendre les données publiques AI-ready & vibe coding"
 author: "Benoit Vinceneux"
 role: "EIG & CPO Données / MCP — Département IA dans l'État"
 organization: "Direction interministérielle du numérique"
-date: "27 Mars 2026"
+date: "26 Mars 2026"
 avatar: "./images/benoitvinceneux.png"
 ---
 
@@ -14,13 +14,13 @@ avatar: "./images/benoitvinceneux.png"
 
 > Part builder, part hacker, part dealmaker
 
-- DINUM (depuis Jan. 2026), data + IA
-- Présidence de la République (2024 - 2025), data intelligence (Santé notamment)
-- Entrepreneur d'Intérêt Général depuis 2024
-- NotreSanté (2017 - 2020) — fondateur startup santé B2C
-- Resopharma (2016 - 2018)
+- DINUM (depuis Jan. 2026) — IA + Data + MCP
+- Présidence de la République (2024 - 2025) — Plateforme d'intelligence décisionnelle
+- Entrepreneur d'Intérêt Général (depuis 2024) — 35 recrutements dans toute l'administration
+- NotreSanté (2017 - 2020) — Fondateur startup santé B2C
+- Resopharma (2016 - 2018) — Déploiement de services en pharmacie (ex. réservation de produits)
 - Laboratoires Pierre Fabre (2011 - 2017) — Espace Pro B2B + refonte des sites de marques
-- Agences Web (2007 - 2013)
+- Agences Web (2007 - 2013) — Libération, Panasonic, Novotel, The Kooples, etc.
 
 ## Le département IA dans l'État
 
@@ -31,6 +31,8 @@ Un département de la DINUM **entièrement consacré à l'IA** depuis 2025.
 1. **Piloter la stratégie IA** pour le secteur public, en lien avec la DITP, la DGAFP et les référents IA ministériels
 2. **Construire un socle technique mutualisé** : applications, outils et infrastructures que toutes les administrations peuvent utiliser
 3. **Accompagner les projets IA** à travers l'incubateur ALLiaNCE
+
+&nbsp;
 
 > On résout les problèmes communs une fois pour toutes, pour que chaque administration se concentre sur son métier.
 
@@ -43,10 +45,12 @@ Un département de la DINUM **entièrement consacré à l'IA** depuis 2025.
 | Pilier | Ce qu'il apporte |
 |--------|-----------------|
 | **Albert API** | GPU mutualisés, modèles LLM (open-weight & Mistral), API aux standards OpenAI |
-| **Plateforme de données** | Données publiques prêtes pour l'IA, RAG as a service |
+| **Plateforme de données** | Données publiques prêtes pour l'IA |
 | **Applications** | Assistant IA, Docs, Visio, Fichiers, etc. |
 
 # Rendre les données publiques AI-ready
+
+## Rendre les données publiques AI-ready
 
 ## La conviction de départ
 
@@ -59,9 +63,9 @@ Rendre la donnée publique consommable par l'IA — pas dans un seul format, mai
 :::
 
 - **Datasets vectorisés** — fichiers Parquet prêts à l'emploi
-- **RAG** — collections documentaires indexées dans Albert API
-- **MCP** — protocole standard pour interroger les données en temps réel
-- **Skills** — modules de connaissance pour les assistants de code
+- **RAG** — collections documentaires publiques & privées
+- **MCP** — connecter et faire interagir des systèmes d'IA
+- **Skills** — fournir les standards de l'État aux assistants de code
 - **CLI** — outils en ligne de commande pour les agents et les développeurs
 
 ## Datasets vectorisés — MediaTech
@@ -78,7 +82,7 @@ Des **collections de données publiques** nettoyées, découpées et vectorisée
 - Annuaires des administrations
 - Conseil constitutionnel
 
-## RAG dans Albert API
+## RAG
 
 **Collections publiques mutualisées**
 Legifrance, service-public.fr… accessibles à toutes les administrations via Albert API.
@@ -94,7 +98,7 @@ Espaces documentaires dédiés pour les données métier sensibles.
 | Single-tenant | Espace ministériel dédié | Sensibles |
 | On-premise | Hébergé par l'administration | Confidentielles |
 
-## MCP — c'est quoi ?
+## Model Context Protocol (MCP)
 
 Le **Model Context Protocol** est un protocole ouvert qui connecte les agents IA à des sources de données et des outils.
 
@@ -114,7 +118,7 @@ L'IA ne se contente plus de texte pré-indexé. Elle peut chercher, filtrer et i
 **data.gouv.fr** — serveur MCP expérimental
 
 - Développé avec **FastMCP** (framework open source)
-- 5 fonctions exposées : recherche de datasets, métadonnées, interrogation tabulaire, recherche d'APIs
+- 5 tools exposés : recherche de datasets, métadonnées, interrogation tabulaire, recherche d'APIs
 - 3 millions de requêtes dès les premiers jours
 - Intégration dans l'Assistant IA prévue avril 2026
 
@@ -212,6 +216,8 @@ Aujourd'hui, on traite de la **donnée ouverte** : textes juridiques, open data,
 
 # Vibe coding dans l'État
 
+## Vibe coding dans l'État
+
 ## Le constat — shadow IT massif
 
 Les agents publics n'attendent pas de réponse officielle.
@@ -262,6 +268,8 @@ Concept en cours d'exploration — pas encore sorti ni validé. On en est au sta
 :::
 
 # Enseignements
+
+## Enseignements
 
 ## Ce qui marche
 
