@@ -46,6 +46,7 @@ function parseMetadata(data: Record<string, unknown>): SlideMetadata {
     role: typeof data['role'] === 'string' ? data['role'] : undefined,
     organization: typeof data['organization'] === 'string' ? data['organization'] : undefined,
     date: typeof data['date'] === 'string' ? data['date'] : undefined,
+    avatar: typeof data['avatar'] === 'string' ? data['avatar'] : undefined,
   }
 }
 

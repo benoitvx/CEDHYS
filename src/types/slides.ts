@@ -5,6 +5,7 @@ export interface SlideMetadata {
   role?: string
   organization?: string
   date?: string
+  avatar?: string
 }
 
 export interface SlideData {

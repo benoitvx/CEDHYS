@@ -25,13 +25,23 @@ export function TitleSlide({ metadata, totalSlides }: TitleSlideProps) {
         <div className={styles.titleSlideSeparator} />
 
         {(metadata.author || metadata.role) && (
-          <div className={styles.titleSlideAuthor}>
-            {metadata.author && (
-              <p className={styles.titleSlideAuthorName}>{metadata.author}</p>
+          <div className={styles.titleSlideAuthorBlock}>
+            {metadata.avatar && (
+              <div className={styles.titleSlideAvatar}>
+                <img
+                  src={metadata.avatar}
+                  alt={metadata.author ?? ''}
+                />
+              </div>
             )}
-            {metadata.role && (
-              <p className={styles.titleSlideAuthorRole}>{metadata.role}</p>
-            )}
+            <div className={styles.titleSlideAuthor}>
+              {metadata.author && (
+                <p className={styles.titleSlideAuthorName}>{metadata.author}</p>
+              )}
+              {metadata.role && (
+                <p className={styles.titleSlideAuthorRole}>{metadata.role}</p>
+              )}
+            </div>
           </div>
         )}
 

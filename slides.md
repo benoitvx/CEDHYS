@@ -5,13 +5,12 @@ author: "Benoit Vinceneux"
 role: "EIG & CPO Données / MCP — Département IA dans l'État"
 organization: "Direction interministérielle du numérique"
 date: "27 Mars 2026"
+avatar: "./images/benoitvinceneux.png"
 ---
 
 # Contexte
 
 ## Qui suis-je
-
-![Photo de Benoit Vinceneux](./images/benoitvinceneux.png)
 
 > Part builder, part hacker, part dealmaker
 
