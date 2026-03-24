@@ -11,19 +11,21 @@ date: "27 Mars 2026"
 
 ## Qui suis-je
 
+![Photo de Benoit Vinceneux](./images/photo-benoit.jpg)
+
 > Part builder, part hacker, part dealmaker
 
-DINUM (depuis Jan. 2026), data + IA = 🚀
-Présidence de la République (2024 - 2025), data intelligence (Santé notamment) 
-Entrepreneur d'Intérêt Général depuis 2024
-NotreSanté (2017 - 2020) - fondateur startup B2C
-Resopharma (2016 - 2018)
-Laboratoires Pierre Fabre (2011 - 2017) - Espace Pro B2B + refonte des sites de marques
-Agences Web (2007 - 2013)
+- DINUM (depuis Jan. 2026), data + IA
+- Présidence de la République (2024 - 2025), data intelligence (Santé notamment)
+- Entrepreneur d'Intérêt Général depuis 2024
+- NotreSanté (2017 - 2020) — fondateur startup santé B2C
+- Resopharma (2016 - 2018)
+- Laboratoires Pierre Fabre (2011 - 2017) — Espace Pro B2B + refonte des sites de marques
+- Agences Web (2007 - 2013)
 
 ## Le département IA dans l'État
 
-Un département de la DINUM (ex-Etalab) **entièrement consacré à l'IA** depuis 2025.
+Un département de la DINUM **entièrement consacré à l'IA** depuis 2025.
 
 **3 missions :**
 
@@ -43,9 +45,7 @@ Un département de la DINUM (ex-Etalab) **entièrement consacré à l'IA** depui
 |--------|-----------------|
 | **Albert API** | GPU mutualisés, modèles LLM (open-weight & Mistral), API aux standards OpenAI |
 | **Plateforme de données** | Données publiques prêtes pour l'IA, RAG as a service |
-| **Applications** | Assistant IA, Docs, Visio — outils IA pour tous les agents |
-
-**Déjà utilisé par :** ANSSI, DGAFP, AIFE, Éducation nationale, Météo France, ministère de la Justice, CNAV…
+| **Applications** | Assistant IA, Docs, Visio, Fichiers, etc. |
 
 # Rendre les données publiques AI-ready
 
@@ -55,13 +55,15 @@ La performance d'un système d'IA dépend directement de la **qualité du contex
 
 C'est ce qu'on appelle le **context engineering** : avant de choisir un modèle, il faut préparer et exposer ses données.
 
-**Notre mission :** rendre la donnée publique consommable par l'IA — pas dans un seul format, mais dans un **écosystème multi-formats** adapté à chaque usage.
+:::callout[Notre mission]
+Rendre la donnée publique consommable par l'IA — pas dans un seul format, mais dans un **écosystème multi-formats** adapté à chaque usage.
+:::
 
-- **Fichiers structurés** — datasets vectorisés prêts à l'emploi
-- **MCP** — protocole standard pour interroger les données en temps réel
-- **CLI** — outils en ligne de commande pour les agents et les développeurs
-- **Skills** — modules de connaissance pour les assistants de code
+- **Datasets vectorisés** — fichiers Parquet prêts à l'emploi
 - **RAG** — collections documentaires indexées dans Albert API
+- **MCP** — protocole standard pour interroger les données en temps réel
+- **Skills** — modules de connaissance pour les assistants de code
+- **CLI** — outils en ligne de commande pour les agents et les développeurs
 
 ## Datasets vectorisés — MediaTech
 
@@ -77,7 +79,21 @@ Des **collections de données publiques** nettoyées, découpées et vectorisée
 - Annuaires des administrations
 - Conseil constitutionnel
 
-**Ce que ça change :** 1 semaine de pipeline de préparation → prêt à l'emploi. Chaque administration n'a plus à refaire le travail.
+## RAG dans Albert API
+
+**Collections publiques mutualisées**
+Legifrance, service-public.fr… accessibles à toutes les administrations via Albert API.
+
+**Collections privées par administration**
+Espaces documentaires dédiés pour les données métier sensibles.
+
+**3 niveaux selon la sensibilité :**
+
+| Niveau | Usage | Données |
+|--------|-------|---------|
+| Mutualisé | Collections partagées | Non sensibles |
+| Single-tenant | Espace ministériel dédié | Sensibles |
+| On-premise | Hébergé par l'administration | Confidentielles |
 
 ## MCP — c'est quoi ?
 
@@ -98,11 +114,15 @@ L'IA ne se contente plus de texte pré-indexé. Elle peut chercher, filtrer et i
 
 **data.gouv.fr** — serveur MCP expérimental
 
+- Développé avec **FastMCP** (framework open source)
 - 5 fonctions exposées : recherche de datasets, métadonnées, interrogation tabulaire, recherche d'APIs
 - 3 millions de requêtes dès les premiers jours
 - Intégration dans l'Assistant IA prévue avril 2026
 
-**data.education.gouv.fr** — le ministère de l'Éducation nationale a lancé son propre serveur MCP pour connecter l'IA à ses données éducatives.
+**data.education.gouv.fr** — serveur MCP du ministère de l'Éducation nationale
+
+- Développé avec **Huwise** (ex-OpenDataSoft — solution propriétaire)
+- Connecte l'IA aux données éducatives
 
 **Vision cible :** une MCP Gateway interministérielle + des verticales spécialisées (DILA/Legifrance, INSEE, Éducation…)
 
@@ -118,28 +138,13 @@ Les **Demandes de Valeurs Foncières** (DVF) : données de transactions immobili
 
 **Un nouveau format :** des applications construites sur MCP, publiables sur les stores IA (ChatGPT, Claude…).
 
-> De la donnée brute à un service utilisable par n'importe quel agent IA — sans développement spécifique côté consommateur.
+:::alert[info]
+Perspective d'utilisation des MCP par les citoyens — ce n'est pas un projet officiel de l'État, mais une exploration de ce que ce format rend possible.
+:::
 
 ## Démo — MCP App DVF
 
 ![Démo de la MCP App DVF — recherche de transactions immobilières via un agent IA](./images/demo-mcp-app-dvf.gif)
-
-## CLI — le format le plus simple
-
-Un **outil en ligne de commande** que l'agent IA peut appeler directement depuis le terminal.
-
-**Pourquoi les CLI comptent :**
-
-- **Familiarité** — les développeurs savent déjà les utiliser, les agents IA aussi
-- **Composabilité** — on les chaîne avec des pipes (`|`), on les intègre dans n'importe quel script
-- **Efficacité** — 2 à 30x moins coûteux en tokens que MCP pour les requêtes simples
-- **Zéro infra** — pas de serveur, pas de processus persistant, ça "just works"
-
-**Exemple :** une CLI `datagouv` qui permet de chercher un dataset, lire ses métadonnées, interroger une ressource tabulaire — en une ligne de commande.
-
-:::callout[CLI et MCP sont complémentaires]
-CLI pour l'efficacité développeur et les requêtes simples. MCP pour l'authentification multi-utilisateurs, l'audit et les agents en production.
-:::
 
 ## Skills pour les assistants de code
 
@@ -147,35 +152,36 @@ Des **modules de connaissance réutilisables** pour Claude Code, OpenCode, Mistr
 
 **Repo open source `skills-etat` :**
 
-| Skill | Contenu |
-|-------|---------|
-| react-dsfr | Composants React conformes au Design System de l'État |
-| rgaa | 106 critères d'accessibilité numérique |
-| securite-anssi | 12 règles de sécurité essentielles |
-| lasuite-ui-kit | Composants pour les applications LaSuite |
-| datagouv | Référence des APIs data.gouv.fr |
+- **react-dsfr** — Composants React conformes au Design System de l'État
+- **rgaa** — 106 critères d'accessibilité numérique
+- **securite-anssi** — 12 règles de sécurité essentielles
+- **lasuite-ui-kit** — Composants pour les applications LaSuite
+- **datagouv** — Référence des APIs data.gouv.fr
 
-**Objectif :** que chaque assistant de code "connaisse" les standards de l'État par défaut.
+**Objectif :** rendre les standards de l'État exploitables avec des assistants de code.
 
 :::alert[info]
 Work in progress — premières initiatives, contributions ouvertes.
 :::
 
-## RAG dans Albert API
+## CLI — le format le plus simple
 
-**Collections publiques mutualisées**
-Legifrance, service-public.fr… accessibles à toutes les administrations via Albert API.
+Un **outil en ligne de commande** que l'agent IA peut appeler directement depuis le terminal.
 
-**Collections privées par administration**
-Espaces documentaires dédiés pour les données métier sensibles.
+**La différence avec MCP :** MCP est un protocole structuré avec gestion d'état, authentification et schemas de données. La CLI est un binaire autonome, sans infra, qui prend une commande et retourne un résultat.
 
-**3 niveaux selon la sensibilité :**
+**Pourquoi les CLI comptent :**
 
-| Niveau | Usage | Données |
-|--------|-------|---------|
-| Mutualisé | Collections partagées | Non sensibles |
-| Single-tenant | Espace ministériel dédié | Sensibles |
-| On-premise | Hébergé par l'administration | Confidentielles |
+- **Familiarité** — les développeurs savent déjà les utiliser, les agents IA aussi
+- **Composabilité** — on les chaîne avec des pipes (`|`), on les intègre dans n'importe quel script
+- **Efficacité** — 2 à 30x moins coûteux en tokens que MCP pour les requêtes simples (les benchmarks varient)
+- **Zéro infra** — pas de serveur, pas de processus persistant
+
+**Exemple :** une CLI `datagouv` qui permet de chercher un dataset, lire ses métadonnées, interroger une ressource tabulaire — en une ligne de commande.
+
+:::callout[CLI et MCP sont complémentaires]
+CLI pour l'automatisation personnelle et les requêtes simples. MCP pour les agents en production avec authentification multi-utilisateurs et audit.
+:::
 
 ## Le prochain challenge — les données authentifiées
 
@@ -199,7 +205,7 @@ Aujourd'hui, on traite de la **donnée ouverte** : textes juridiques, open data,
 
 1. **La préparation des données est le vrai bloqueur** — pas l'accès. Les données existent, mais ne sont pas dans un format exploitable par l'IA.
 
-2. **Il faut multiplier les formats d'exposition** — MCP, Parquet, RAG, Skills… Chaque usage a son format optimal.
+2. **Il faut multiplier les formats d'exposition** — Parquet, RAG, MCP, Skills, CLI… Chaque usage a son format optimal.
 
 3. **La verticalisation par domaine fait sens** — juridique, éducation, santé, économie… Chaque domaine a ses spécificités.
 
@@ -237,6 +243,10 @@ L'**Observatoire du Service Public de la Donnée de Référence** : un tableau d
 - Comment intégrer dans un SI existant ?
 
 > Le vibe coding accélère la création. Il ne résout pas la mise à l'échelle.
+
+## L'Observatoire du SPDR
+
+![Capture d'écran de l'Observatoire du Service Public de la Donnée de Référence](./images/observatoire-spdr.png)
 
 ## Albert Code — le concept
 
@@ -284,5 +294,4 @@ Concept en cours d'exploration — pas encore sorti ni validé. On en est au sta
 
 Questions, retours d'expérience, idées de collaboration ?
 
-- alliance@numerique.gouv.fr
 - benoit.vinceneux@numerique.gouv.fr
