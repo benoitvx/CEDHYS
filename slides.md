@@ -11,7 +11,7 @@ date: "27 Mars 2026"
 
 ## Qui suis-je
 
-![Photo de Benoit Vinceneux](./images/photo-benoit.jpg)
+![Photo de Benoit Vinceneux](./images/benoitvinceneux.png)
 
 > Part builder, part hacker, part dealmaker
 
