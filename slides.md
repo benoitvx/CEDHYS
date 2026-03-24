@@ -1,79 +1,288 @@
 ---
-title: "DSFR Slides Template"
-subtitle: "Créez vos présentations en Markdown"
-author: "Votre Nom"
-role: "Votre Poste @ Organisation"
+title: "L'IA dans l'État"
+subtitle: "Rendre les données publiques AI-ready & vibe coding"
+author: "Benoit Vinceneux"
+role: "EIG & CPO Données / MCP — Département IA dans l'État"
 organization: "Direction interministérielle du numérique"
-date: "20 Janvier 2026"
+date: "27 Mars 2026"
 ---
 
-# Introduction
+# Contexte
 
-## Bienvenue
+## Qui suis-je
 
-Bienvenue dans **DSFR Slides Template**, un outil pour créer des présentations conformes au Design System de l'État.
+> Part builder, part hacker, part dealmaker
 
-- Écrivez vos slides en **Markdown**
-- Déployez automatiquement sur **GitHub Pages**
-- Profitez du style **DSFR** sans effort
+DINUM (depuis Jan. 2026), data + IA = 🚀
+Présidence de la République (2024 - 2025), data intelligence (Santé notamment) 
+Entrepreneur d'Intérêt Général depuis 2024
+NotreSanté (2017 - 2020) - fondateur startup B2C
+Resopharma (2016 - 2018)
+Laboratoires Pierre Fabre (2011 - 2017) - Espace Pro B2B + refonte des sites de marques
+Agences Web (2007 - 2013)
 
-## Comment ça marche ?
+## Le département IA dans l'État
 
-1. Éditez le fichier `slides.md`
-2. Utilisez la syntaxe Markdown standard
-3. Push sur GitHub
-4. Votre présentation est en ligne !
+Un département de la DINUM (ex-Etalab) **entièrement consacré à l'IA** depuis 2025.
 
-> Astuce : consultez FORMAT.md pour la syntaxe complète.
+**3 missions :**
 
-# Fonctionnalités
+1. **Piloter la stratégie IA** pour le secteur public, en lien avec la DITP, la DGAFP et les référents IA ministériels
+2. **Construire un socle technique mutualisé** : applications, outils et infrastructures que toutes les administrations peuvent utiliser
+3. **Accompagner les projets IA** à travers l'incubateur ALLiaNCE
 
-## Éléments Markdown
+> On résout les problèmes communs une fois pour toutes, pour que chaque administration se concentre sur son métier.
 
-Le parser supporte tous les éléments Markdown standards :
+## Le socle IA interministériel
 
-- **Gras** et *italique*
-- [Liens](https://www.systeme-de-design.gouv.fr/)
-- `Code inline`
-- Listes à puces et numérotées
+**Le problème :** chaque administration repartait de zéro — quelle infrastructure GPU ? Quel modèle souverain ? Comment gérer SecNumCloud ? Comment respecter la loi SREN ?
 
-## Callouts et Alertes
+**3 piliers du socle :**
 
-:::callout[Information importante]
-Les callouts permettent de mettre en avant une information clé.
+| Pilier | Ce qu'il apporte |
+|--------|-----------------|
+| **Albert API** | GPU mutualisés, modèles LLM (open-weight & Mistral), API aux standards OpenAI |
+| **Plateforme de données** | Données publiques prêtes pour l'IA, RAG as a service |
+| **Applications** | Assistant IA, Docs, Visio — outils IA pour tous les agents |
+
+**Déjà utilisé par :** ANSSI, DGAFP, AIFE, Éducation nationale, Météo France, ministère de la Justice, CNAV…
+
+# Rendre les données publiques AI-ready
+
+## La conviction de départ
+
+La performance d'un système d'IA dépend directement de la **qualité du contexte** qu'on lui fournit.
+
+C'est ce qu'on appelle le **context engineering** : avant de choisir un modèle, il faut préparer et exposer ses données.
+
+**Notre mission :** rendre la donnée publique consommable par l'IA — pas dans un seul format, mais dans un **écosystème multi-formats** adapté à chaque usage.
+
+- **Fichiers structurés** — datasets vectorisés prêts à l'emploi
+- **MCP** — protocole standard pour interroger les données en temps réel
+- **CLI** — outils en ligne de commande pour les agents et les développeurs
+- **Skills** — modules de connaissance pour les assistants de code
+- **RAG** — collections documentaires indexées dans Albert API
+
+## Datasets vectorisés — MediaTech
+
+Des **collections de données publiques** nettoyées, découpées et vectorisées, distribuées en Parquet sur HuggingFace et data.gouv.fr.
+
+**9 collections disponibles :**
+
+- Legifrance (codes et lois)
+- service-public.fr (guides usagers)
+- Catalogue data.gouv.fr
+- Travail & emploi
+- CNIL
+- Annuaires des administrations
+- Conseil constitutionnel
+
+**Ce que ça change :** 1 semaine de pipeline de préparation → prêt à l'emploi. Chaque administration n'a plus à refaire le travail.
+
+## MCP — c'est quoi ?
+
+Le **Model Context Protocol** est un protocole ouvert qui connecte les agents IA à des sources de données et des outils.
+
+**L'analogie :** une prise universelle entre l'IA et vos systèmes d'information.
+
+- **Avant MCP :** chaque intégration IA ↔ donnée = un développement sur mesure
+- **Avec MCP :** un protocole standard, l'IA interroge les sources en temps réel
+
+**Adopté par** Anthropic, OpenAI, Google, Microsoft, et un écosystème open source grandissant.
+
+:::callout[Ce que ça change concrètement]
+L'IA ne se contente plus de texte pré-indexé. Elle peut chercher, filtrer et interroger vos données à la volée — comme un développeur le ferait avec une API.
 :::
+
+## Nos premières briques MCP
+
+**data.gouv.fr** — serveur MCP expérimental
+
+- 5 fonctions exposées : recherche de datasets, métadonnées, interrogation tabulaire, recherche d'APIs
+- 3 millions de requêtes dès les premiers jours
+- Intégration dans l'Assistant IA prévue avril 2026
+
+**data.education.gouv.fr** — le ministère de l'Éducation nationale a lancé son propre serveur MCP pour connecter l'IA à ses données éducatives.
+
+**Vision cible :** une MCP Gateway interministérielle + des verticales spécialisées (DILA/Legifrance, INSEE, Éducation…)
+
+## Démo — MCP data.gouv.fr
+
+![Démo du serveur MCP data.gouv.fr — recherche et interrogation de données publiques en temps réel](./images/demo-mcp-datagouv.gif)
+
+## MCP App — l'exemple DVF
+
+Les **Demandes de Valeurs Foncières** (DVF) : données de transactions immobilières, le dataset le plus demandé sur data.gouv.fr.
+
+**Ce qu'on a construit :** une MCP App qui permet à un agent IA de chercher et afficher les transactions immobilières d'une commune.
+
+**Un nouveau format :** des applications construites sur MCP, publiables sur les stores IA (ChatGPT, Claude…).
+
+> De la donnée brute à un service utilisable par n'importe quel agent IA — sans développement spécifique côté consommateur.
+
+## Démo — MCP App DVF
+
+![Démo de la MCP App DVF — recherche de transactions immobilières via un agent IA](./images/demo-mcp-app-dvf.gif)
+
+## CLI — le format le plus simple
+
+Un **outil en ligne de commande** que l'agent IA peut appeler directement depuis le terminal.
+
+**Pourquoi les CLI comptent :**
+
+- **Familiarité** — les développeurs savent déjà les utiliser, les agents IA aussi
+- **Composabilité** — on les chaîne avec des pipes (`|`), on les intègre dans n'importe quel script
+- **Efficacité** — 2 à 30x moins coûteux en tokens que MCP pour les requêtes simples
+- **Zéro infra** — pas de serveur, pas de processus persistant, ça "just works"
+
+**Exemple :** une CLI `datagouv` qui permet de chercher un dataset, lire ses métadonnées, interroger une ressource tabulaire — en une ligne de commande.
+
+:::callout[CLI et MCP sont complémentaires]
+CLI pour l'efficacité développeur et les requêtes simples. MCP pour l'authentification multi-utilisateurs, l'audit et les agents en production.
+:::
+
+## Skills pour les assistants de code
+
+Des **modules de connaissance réutilisables** pour Claude Code, OpenCode, Mistral Vibe.
+
+**Repo open source `skills-etat` :**
+
+| Skill | Contenu |
+|-------|---------|
+| react-dsfr | Composants React conformes au Design System de l'État |
+| rgaa | 106 critères d'accessibilité numérique |
+| securite-anssi | 12 règles de sécurité essentielles |
+| lasuite-ui-kit | Composants pour les applications LaSuite |
+| datagouv | Référence des APIs data.gouv.fr |
+
+**Objectif :** que chaque assistant de code "connaisse" les standards de l'État par défaut.
+
+:::alert[info]
+Work in progress — premières initiatives, contributions ouvertes.
+:::
+
+## RAG dans Albert API
+
+**Collections publiques mutualisées**
+Legifrance, service-public.fr… accessibles à toutes les administrations via Albert API.
+
+**Collections privées par administration**
+Espaces documentaires dédiés pour les données métier sensibles.
+
+**3 niveaux selon la sensibilité :**
+
+| Niveau | Usage | Données |
+|--------|-------|---------|
+| Mutualisé | Collections partagées | Non sensibles |
+| Single-tenant | Espace ministériel dédié | Sensibles |
+| On-premise | Hébergé par l'administration | Confidentielles |
+
+## Le prochain challenge — les données authentifiées
+
+Aujourd'hui, on traite de la **donnée ouverte** : textes juridiques, open data, guides publics.
+
+**Ce qu'on n'a pas encore attaqué :**
+
+- SI internes et bases métier protégées
+- APIs nécessitant des droits d'accès
+- Documents à diffusion restreinte
+
+**Les enjeux :**
+
+- Gestion fine des droits et des habilitations
+- Traçabilité des accès par les agents IA
+- Gouvernance : qui autorise quoi, pour quel usage ?
+
+> C'est le palier pour que l'IA soit vraiment utile dans les processus métier quotidiens.
+
+## Convictions terrain
+
+1. **La préparation des données est le vrai bloqueur** — pas l'accès. Les données existent, mais ne sont pas dans un format exploitable par l'IA.
+
+2. **Il faut multiplier les formats d'exposition** — MCP, Parquet, RAG, Skills… Chaque usage a son format optimal.
+
+3. **La verticalisation par domaine fait sens** — juridique, éducation, santé, économie… Chaque domaine a ses spécificités.
+
+4. **Le RAG mutualisé a ses limites** — chaque cas d'usage est spécifique. La vraie valeur est dans les données pré-préparées, pas dans l'infra RAG elle-même.
+
+# Vibe coding dans l'État
+
+## Le constat — shadow IT massif
+
+Les agents publics n'attendent pas de réponse officielle.
+
+**Aujourd'hui dans les administrations :**
+
+- Claude Code, Cursor, Copilot, Lovable utilisés **sans cadre**
+- Pas de réponse souveraine
+- Pas de doctrine sur ce qui est autorisé
+
+Des CPO prototypent des applications. Des non-développeurs créent des outils internes. Le rapport au code change fondamentalement.
 
 :::alert[warning]
-Les alertes attirent l'attention sur des points critiques.
+Le shadow IT n'est pas un problème de discipline — c'est le signal d'un besoin non couvert.
 :::
 
-## Tableaux
+## Un exemple concret — l'Observatoire du SPDR
 
-| Fonctionnalité | Supportée |
-|----------------|-----------|
-| Front-matter YAML | Oui |
-| Sections | Oui |
-| Callouts | Oui |
-| Alertes | Oui |
-| Images | Oui |
+L'**Observatoire du Service Public de la Donnée de Référence** : un tableau de bord de suivi de la conformité de 9 datasets de référence de l'État.
 
-# Navigation
+- **Projet bloqué depuis 18 mois** — pas de temps dev disponible, pas de budget
+- **Grâce au vibe coding : sorti en quelques jours**
 
-## Raccourcis clavier
+**Mais le vrai problème commence maintenant :**
 
-La navigation au clavier est complète :
+- Comment passer ça en production ?
+- Comment maintenir, faire évoluer, sécuriser ?
+- Comment intégrer dans un SI existant ?
 
-| Touche | Action |
-|--------|--------|
-| → / Espace | Slide suivante |
-| ← | Slide précédente |
-| Home | Première slide |
-| End | Dernière slide |
-| 1-9 | Aller à la slide N |
+> Le vibe coding accélère la création. Il ne résout pas la mise à l'échelle.
 
-## Merci !
+## Albert Code — le concept
 
-Créez vos présentations DSFR en quelques minutes.
+Un **assistant de code souverain** qui intègre les standards de l'État par défaut.
 
-- Repository : [GitHub](https://github.com/)
-- Documentation : [FORMAT.md](./FORMAT.md)
+**L'idée :**
+
+- DSFR, ANSSI, RGAA embarqués — pas ajoutés après coup
+- Approche 100% locale — aucune donnée ne sort de la machine
+- Le modèle est une commodité — la vraie valeur, ce sont les standards by design
+
+:::alert[info]
+Concept en cours d'exploration — pas encore sorti ni validé. On en est au stade de la recherche utilisateur et du prototypage.
+:::
+
+# Enseignements
+
+## Ce qui marche
+
+- **Mutualiser l'infra** plutôt que dupliquer les efforts — GPU, modèles, compliance
+- **Embarquer les standards dans l'outil** — pas en aval, pas en option
+- **Commencer simple et local** — un script d'install, des données prêtes, pas d'usine à gaz
+- **Piloter par les usages terrain** — pas par la technologie
+
+## Ce qui est dur
+
+- **Souveraineté vs. performance** — le gap entre modèles souverains et commerciaux se réduit, mais existe encore
+- **Passage POC → production** — le "valley of death" de l'IA publique, amplifié par le vibe coding
+- **Données authentifiées et SI legacy** — le prochain mur à franchir
+- **Gouvernance interministérielle** — co-financement, priorisation, contributions entre ministères
+
+## Ponts avec le monde de la santé
+
+| Enjeu État | Parallèle Santé |
+|------------|----------------|
+| SecNumCloud & loi SREN | HDS & réglementation données de santé |
+| SI hétérogènes entre ministères | SI hospitaliers et laborantins fragmentés |
+| MCP comme standard d'interopérabilité | HL7/FHIR — même ambition, même besoin |
+| Souveraineté non négociable | Données pharma = données critiques |
+| RAG sur données privées | Votre question est aussi la nôtre |
+
+## Échanges
+
+**Merci !**
+
+Questions, retours d'expérience, idées de collaboration ?
+
+- alliance@numerique.gouv.fr
+- benoit.vinceneux@numerique.gouv.fr
