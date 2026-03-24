@@ -52,6 +52,10 @@ Un département de la DINUM **entièrement consacré à l'IA** depuis 2025.
 
 ## Rendre les données publiques AI-ready
 
+:::callout[Context engineering]
+La performance de l'IA dépend de la qualité du contexte. Notre mission : préparer et exposer la donnée publique dans **tous les formats** que l'IA consomme.
+:::
+
 ## La conviction de départ
 
 La performance d'un système d'IA dépend directement de la **qualité du contexte** qu'on lui fournit.
@@ -120,14 +124,15 @@ L'IA ne se contente plus de texte pré-indexé. Elle peut chercher, filtrer et i
 - Développé avec **FastMCP** (framework open source)
 - 5 tools exposés : recherche de datasets, métadonnées, interrogation tabulaire, recherche d'APIs
 - 3 millions de requêtes dès les premiers jours
-- Intégration dans l'Assistant IA prévue avril 2026
 
 **data.education.gouv.fr** — serveur MCP du ministère de l'Éducation nationale
 
 - Développé avec **Huwise** (ex-OpenDataSoft — solution propriétaire)
 - Connecte l'IA aux données éducatives
 
-**Vision cible :** une MCP Gateway interministérielle + des verticales spécialisées (DILA/Legifrance, INSEE, Éducation…)
+:::callout[Vision cible]
+Une MCP Gateway interministérielle + des verticales spécialisées (DILA/Legifrance, INSEE, Éducation…)
+:::
 
 ## Démo — MCP data.gouv.fr
 
@@ -171,8 +176,6 @@ Work in progress — premières initiatives, contributions ouvertes.
 
 Un **outil en ligne de commande** que l'agent IA peut appeler directement depuis le terminal.
 
-**La différence avec MCP :** MCP est un protocole structuré avec gestion d'état, authentification et schemas de données. La CLI est un binaire autonome, sans infra, qui prend une commande et retourne un résultat.
-
 **Pourquoi les CLI comptent :**
 
 - **Familiarité** — les développeurs savent déjà les utiliser, les agents IA aussi
@@ -194,7 +197,7 @@ Aujourd'hui, on traite de la **donnée ouverte** : textes juridiques, open data,
 
 - SI internes et bases métier protégées
 - APIs nécessitant des droits d'accès
-- Documents à diffusion restreinte
+- Documents à diffusion restreinte voir secret défense...
 
 **Les enjeux :**
 
@@ -206,21 +209,31 @@ Aujourd'hui, on traite de la **donnée ouverte** : textes juridiques, open data,
 
 ## Convictions terrain
 
-1. **La préparation des données est le vrai bloqueur** — pas l'accès. Les données existent, mais ne sont pas dans un format exploitable par l'IA.
+:::callout[1. La préparation des données est le vrai bloqueur]
+Pas l'accès. Les données existent, mais ne sont pas dans un format exploitable par l'IA.
+:::
 
-2. **Il faut multiplier les formats d'exposition** — Parquet, RAG, MCP, Skills, CLI… Chaque usage a son format optimal.
+:::callout[2. Il faut multiplier les formats d'exposition]
+Parquet, RAG, MCP, Skills, CLI… Chaque usage a son format optimal.
+:::
 
-3. **La verticalisation par domaine fait sens** — juridique, éducation, santé, économie… Chaque domaine a ses spécificités.
+:::callout[3. La verticalisation par domaine fait sens]
+Juridique, éducation, santé, économie… Chaque domaine a ses spécificités.
+:::
 
-4. **Le RAG mutualisé a ses limites** — chaque cas d'usage est spécifique. La vraie valeur est dans les données pré-préparées, pas dans l'infra RAG elle-même.
+:::callout[4. Le RAG mutualisé a ses limites]
+Chaque cas d'usage est spécifique. La vraie valeur est dans les données pré-préparées, pas dans l'infra RAG elle-même.
+:::
 
 # Vibe coding dans l'État
 
 ## Vibe coding dans l'État
 
-## Le constat — shadow IT massif
+:::callout[Le vibe coding]
+Des non-développeurs qui créent des applications grâce à l'IA. Le rapport au code change fondamentalement.
+:::
 
-Les agents publics n'attendent pas de réponse officielle.
+## Le constat — shadow IT massif
 
 **Aujourd'hui dans les administrations :**
 
@@ -263,6 +276,8 @@ Un **assistant de code souverain** qui intègre les standards de l'État par dé
 - Approche 100% locale — aucune donnée ne sort de la machine
 - Le modèle est une commodité — la vraie valeur, ce sont les standards by design
 
+&nbsp;
+
 :::alert[info]
 Concept en cours d'exploration — pas encore sorti ni validé. On en est au stade de la recherche utilisateur et du prototypage.
 :::
@@ -270,6 +285,10 @@ Concept en cours d'exploration — pas encore sorti ni validé. On en est au sta
 # Enseignements
 
 ## Enseignements
+
+:::callout[Retours d'expérience]
+Ce qu'on a appris en construisant le socle IA de l'État — et les parallèles avec le monde de la santé.
+:::
 
 ## Ce qui marche
 
@@ -285,20 +304,19 @@ Concept en cours d'exploration — pas encore sorti ni validé. On en est au sta
 - **Données authentifiées et SI legacy** — le prochain mur à franchir
 - **Gouvernance interministérielle** — co-financement, priorisation, contributions entre ministères
 
-## Ponts avec le monde de la santé
-
-| Enjeu État | Parallèle Santé |
-|------------|----------------|
-| SecNumCloud & loi SREN | HDS & réglementation données de santé |
-| SI hétérogènes entre ministères | SI hospitaliers et laborantins fragmentés |
-| MCP comme standard d'interopérabilité | HL7/FHIR — même ambition, même besoin |
-| Souveraineté non négociable | Données pharma = données critiques |
-| RAG sur données privées | Votre question est aussi la nôtre |
-
 ## Échanges
 
-**Merci !**
+<div style="text-align: center;">
+<div class="merci-presenter-card">
+<div class="merci-avatar"><img src="./images/benoitvinceneux.png" alt="Benoit Vinceneux" /></div>
+<div class="merci-info">
+<p class="merci-name">Benoit Vinceneux</p>
+<p class="merci-role">EIG & CPO Données / MCP — Département IA dans l'État</p>
+</div>
+</div>
 
-Questions, retours d'expérience, idées de collaboration ?
-
-- benoit.vinceneux@numerique.gouv.fr
+<div class="merci-contact">
+<a href="mailto:benoit.vinceneux@numerique.gouv.fr">benoit.vinceneux@numerique.gouv.fr</a>
+<a href="https://www.linkedin.com/in/benoitvinceneux/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</div>
+</div>

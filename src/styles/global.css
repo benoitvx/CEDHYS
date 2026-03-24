@@ -1,0 +1,81 @@
+/* =====================================================
+   GLOBAL STYLES — Complément aux CSS modules
+   ===================================================== */
+
+/* Images dans les slides (GIF démos, captures d'écran) */
+.fr-text img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 450px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  object-fit: contain;
+}
+
+/* Slide Merci — carte présentateur */
+.merci-presenter-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 2.5rem;
+  background-color: #f6f6f6;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.merci-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #000091;
+  flex-shrink: 0;
+}
+
+.merci-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+  max-height: none;
+}
+
+.merci-info {
+  text-align: left;
+}
+
+.merci-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #000091;
+  margin: 0 0 0.25rem 0;
+}
+
+.merci-role {
+  color: #6a6af4;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.merci-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.merci-contact a {
+  color: #000091;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.merci-contact a:hover {
+  text-decoration: underline;
+}

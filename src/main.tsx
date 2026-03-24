@@ -5,6 +5,7 @@ import App from './App'
 
 // CSS DSFR
 import '@codegouvfr/react-dsfr/main.css'
+import './styles/global.css'
 
 startReactDsfr({ defaultColorScheme: 'light' })
 
