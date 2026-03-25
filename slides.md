@@ -2,7 +2,7 @@
 title: "L'IA dans l'État"
 subtitle: "Rendre les données publiques AI-ready & vibe coding"
 author: "Benoit Vinceneux"
-role: "EIG & CPO Données / MCP — Département IA dans l'État"
+role: "EIG & CPO Données & MCP @ Services du Premier Ministre"
 organization: "Direction interministérielle du numérique"
 date: "26 Mars 2026"
 avatar: "./images/benoitvinceneux.png"
@@ -128,10 +128,6 @@ L'IA ne se contente plus de texte pré-indexé. Elle peut chercher, filtrer et i
 Une MCP Gateway interministérielle + des verticales spécialisées (DILA/Legifrance, INSEE, Éducation…)
 :::
 
-## Démo — MCP data.gouv.fr
-
-![Démo du serveur MCP data.gouv.fr — recherche et interrogation de données publiques en temps réel](./images/demo-mcp-datagouv.gif)
-
 ## MCP App — l'exemple DVF
 
 Les **Demandes de Valeurs Foncières** (DVF) : données de transactions immobilières, le dataset le plus demandé sur data.gouv.fr.
@@ -152,7 +148,7 @@ Perspective d'utilisation des MCP par les citoyens — ce n'est pas un projet of
 
 Des **modules de connaissance réutilisables** pour Claude Code, OpenCode, Mistral Vibe.
 
-**Repo open source `skills-etat` :**
+**Repo open source contenant :**
 
 - **react-dsfr** — Composants React conformes au Design System de l'État
 - **rgaa** — 106 critères d'accessibilité numérique
@@ -218,8 +214,8 @@ Aujourd'hui, on traite de la **donnée ouverte** : textes juridiques, open data,
 **Aujourd'hui dans les administrations :**
 
 - Claude Code, Cursor, Copilot, Lovable utilisés **sans cadre**
-- Pas de réponse souveraine
 - Pas de doctrine sur ce qui est autorisé
+- Pas de réponse souveraine
 
 Des CPO prototypent des applications. Des non-développeurs créent des outils internes. Le rapport au code change fondamentalement.
 
@@ -246,7 +242,7 @@ L'**Observatoire du Service Public de la Donnée de Référence** : un tableau d
 
 ![Capture d'écran de l'Observatoire du Service Public de la Donnée de Référence](./images/observatoire-spdr.png)
 
-## Albert Code — le concept
+## "Albert Code" — le concept
 
 Un **assistant de code souverain** qui intègre les standards de l'État par défaut.
 
@@ -264,14 +260,14 @@ Concept en cours d'exploration — pas encore sorti ni validé. On en est au sta
 
 # Enseignements
 
-## Ce qui marche
+### Ce qui marche
 
 - **Mutualiser l'infra** plutôt que dupliquer les efforts — GPU, modèles, compliance
 - **Embarquer les standards dans l'outil** — pas en aval, pas en option
 - **Commencer simple et local** — un script d'install, des données prêtes, pas d'usine à gaz
 - **Piloter par les usages terrain** — pas par la technologie
 
-## Ce qui est dur
+### Ce qui est dur
 
 - **Souveraineté vs. performance** — le gap entre modèles souverains et commerciaux se réduit, mais existe encore
 - **Passage POC → production** — le "valley of death" de l'IA publique, amplifié par le vibe coding
