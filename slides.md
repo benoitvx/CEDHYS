@@ -260,6 +260,10 @@ Concept en cours d'exploration — pas encore sorti ni validé. On en est au sta
 
 # Enseignements
 
+## Test
+
+Lorem ipsum
+
 ## Approche test & learn
 
 **Ce qui marche :**
