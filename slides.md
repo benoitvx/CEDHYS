@@ -260,14 +260,14 @@ Concept en cours d'exploration — pas encore sorti ni validé. On en est au sta
 
 # Enseignements
 
-### Ce qui marche
+**Ce qui marche :**
 
 - **Mutualiser l'infra** plutôt que dupliquer les efforts — GPU, modèles, compliance
 - **Embarquer les standards dans l'outil** — pas en aval, pas en option
 - **Commencer simple et local** — un script d'install, des données prêtes, pas d'usine à gaz
 - **Piloter par les usages terrain** — pas par la technologie
 
-### Ce qui est dur
+**Ce qui est dur :**
 
 - **Souveraineté vs. performance** — le gap entre modèles souverains et commerciaux se réduit, mais existe encore
 - **Passage POC → production** — le "valley of death" de l'IA publique, amplifié par le vibe coding
